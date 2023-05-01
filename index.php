@@ -46,11 +46,13 @@ if(isset($_POST["submit_scores"])){
         .input-form{
             display: flex;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         input{
             padding: 5px;
             margin: 7px;
-            display: block;
+            margin-left: 30px;
         }
     </style>
 </head>
@@ -59,29 +61,41 @@ if(isset($_POST["submit_scores"])){
 <h1>Online Score Registration Portal</h1>
 
 <div class="input-form">
-    <form action = "" method = "post">
+        <form action = "" method = "post">
        
-                <label for="matric">Enter your matric number</label>
-                <input type = "text" name = "matric">
+                <div class="matric-entry">
+                    <label for="matric">Enter your matric number</label>
+                    <input type = "text" name = "matric">
+                </div>
+
+                <div class="fullname-entry">
+                    <label for="fullname">Enter your full name</label>
+                    <input type = "text" name = "fullname">
+                </div>
            
-                Enter your full name
-                <input type = "text" name = "fullname">
+                <div class="seng406-entry">
+                    <label for="seng406">Enter your score for seng406</label>
+                    <input type = "text" name = "seng406">
+                </div>
            
-                Enter your score for seng406
-                <input type = "text" name = "seng406">
-           
-                Enter your score for seng412
-                <input type = "text" name = "seng412">
+                <div class="seng412-entry">
+                    <label for="seng412">Enter your score for seng412</label>
+                    <input type = "text" name = "seng412">
+                </div>
             
-                Enter your score for seng404
-                <input type = "text" name = "seng404">
+                <div class="seng404-entry">
+                    <label for="seng404">Enter your score for seng404</label>
+                    <input type = "text" name = "seng404">
+                </div>
             
-                Enter your score for seng408
-                <input type = "text" name = "seng408">
+                <div class="seng408-entry">
+                    <label for="seng408">Enter your score for seng408<label>
+                    <input type = "text" name = "seng408">
+                </div>
            
                 <input type = "submit" name = "submit_scores" value = "submit scores">
             
-    </form>
+        </form>
 </div>
     
 </body>
