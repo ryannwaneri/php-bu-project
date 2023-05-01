@@ -54,6 +54,17 @@ if(isset($_POST["submit_scores"])){
             margin: 7px;
             margin-left: 30px;
         }
+        td {
+            border: 1px solid;
+            text-align: center;
+
+        }
+        input {
+            width: 90%;
+            display: grid;
+            place-content: center;
+        }
+
     </style>
 </head>
 <body>
@@ -61,39 +72,55 @@ if(isset($_POST["submit_scores"])){
 <h1>Online Score Registration Portal</h1>
 
 <div class="input-form">
-        <form action = "" method = "post">
-       
-                <div class="matric-entry">
-                    <label for="matric">Enter your matric number</label>
-                    <input type = "text" name = "matric">
-                </div>
-
-                <div class="fullname-entry">
-                    <label for="fullname">Enter your full name</label>
-                    <input type = "text" name = "fullname">
-                </div>
-           
-                <div class="seng406-entry">
-                    <label for="seng406">Enter your score for seng406</label>
-                    <input type = "text" name = "seng406">
-                </div>
-           
-                <div class="seng412-entry">
-                    <label for="seng412">Enter your score for seng412</label>
-                    <input type = "text" name = "seng412">
-                </div>
-            
-                <div class="seng404-entry">
-                    <label for="seng404">Enter your score for seng404</label>
-                    <input type = "text" name = "seng404">
-                </div>
-            
-                <div class="seng408-entry">
-                    <label for="seng408">Enter your score for seng408<label>
-                    <input type = "text" name = "seng408">
-                </div>
-           
-                <input type = "submit" name = "submit_scores" value = "submit scores">
+        <form action = "index.php" method = "post">
+       <table>
+        <caption style="background-color: yellow;"><h1>Online Score Sheet</h1></caption>
+        <tr>
+            <td style="width: 600px; vertical-align: top; text-align: center;">
+                <table style="border-spacing: 10px;">
+                    <tr><td><a href="index.php">Score Entry</a></td></tr>
+                    <tr><td><a href="view.php">Score View</a></td></tr>
+                </table>
+            </td>
+            <td rowspan="3">
+                <table style="width: 90vw; box-sizing: border-box;">
+                    <tr>
+                        <th style="font-size: 1.5rem;">Details Entry</th>
+                    </tr>
+                    <tr>
+                        <td>Matric Number</td>
+                        <td><input type="text" name="matric"></td>
+                    </tr>
+                    <tr>
+                        <td>Full Name</td>
+                        <td><input type="text" name="fullname"></td>
+                    </tr>
+                    <tr>
+                        <th style="font-size: 1.5rem">Score Entry</th>
+                    </tr>
+                    <tr>
+                        <td>SENG 406</td>
+                        <td><input type="number" name="seng406"></td>
+                    </tr>
+                    <tr>
+                        <td>SENG 412</td>
+                        <td><input type="number" name="seng412"></td>
+                    </tr>
+                    <tr>
+                        <td>SENG 404</td>
+                        <td><input type="number" name="seng404"></td>
+                    </tr>
+                    <tr>
+                        <td>SENG 408</td>
+                        <td><input type="number" name="seng408" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" style="background-color: blue; font-size: 2rem;"></button></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>            
+    </table>
             
         </form>
 </div>
